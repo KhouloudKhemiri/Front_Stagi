@@ -1,0 +1,88 @@
+
+<section style="padding-top: 10rem;">
+
+
+
+
+
+
+  <div class="row flex-grow">
+
+
+    <div class="col-12 grid-margin stretch-card">
+      <div class="card card-rounded">
+        <div class="card-body">
+          <div class="d-sm-flex justify-content-between align-items-start">
+            <div>
+              <h4 class="card-title card-title-dash">Liste Des Locations</h4>
+            </div>
+            <div>
+
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Search..."
+
+                />
+              </div>
+            </div>
+          </div>
+          <div class="table-responsive  mt-1">
+            <table class="table select-table">
+              <thead>
+                <tr>
+
+                  <th>Nom </th>
+                  <th>prenom</th>
+                  <th>Prix</th>
+                  <th>Nombre des jours</th>
+                  <th>Plus</th>
+                </tr>
+              </thead>
+              <tbody>
+
+
+                <tr *ngFor="let c of user ">
+                  <td>
+                    <h6>{{c.fristName}}</h6>
+                  </td>
+                  <td>
+                    <h6>{{c.lastName}}</h6>
+                  </td>
+                  <td>
+                    <h6>{{c.mail}}</h6>
+                  </td>
+                  <td>
+                    <h6>{{c.passeWord}}</h6>
+                  </td>
+                  <td>
+                    <div class="badge badge-opacity-warning">
+                      <button type="button" routerLink="../DetailleReservation/{{c.id}}" class="btn btn-primary btn-rounded btn-icon">
+                        <i class="mdi mdi-account-card-details"></i>
+                      </button>
+                      </div>
+                  </td>
+
+                  <!-- <td>
+                      <div class="badge badge-opacity-warning">
+                        <button type="button" routerLink="../detaille/{{c.id}}" class="btn btn-primary btn-rounded btn-icon">
+                          <i class="mdi mdi-account-card-details"></i>
+                        </button>
+                        <button type="button" (click)="delete(c.id)" class="btn btn-danger btn-rounded btn-icon">
+                          <i class="mdi mdi-close "></i>
+                        </button>
+                      </div>
+                  </td> -->
+                </tr>
+              </tbody>
+            </table>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  </section>
